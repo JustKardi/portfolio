@@ -1,0 +1,277 @@
+body {
+    background-color: black;
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+/* Change the highlight color of the entire page */
+::selection {
+    background-color: white; /* Highlight background color */
+    color: black; /* Highlighted text color */
+}
+
+::-moz-selection {
+    background-color: white; /* Highlight background color for Firefox */
+    color: black; /* Highlighted text color for Firefox */
+}
+
+.title {
+    color: #FEFEFE;
+    font-family: "Roboto", sans-serif;
+    font-size: 3.5em;
+    margin-left: 3%;
+}
+
+.title--portfolio {
+    display: inline-block;
+    background: linear-gradient(360deg, rgb(0, 255, 255), magenta);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title--portfolio--span {
+    position: relative;
+    display: inline-block;
+    background: -webkit-linear-gradient(magenta, cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title--portfolio--span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust the position of the underline */
+    width: 100%;
+    height: 3px; /* Thickness of the underline */
+    background: linear-gradient(90deg, cyan, magenta); /* Match the text gradient */
+    z-index: -1; /* Place the underline behind the text */
+}
+
+.about-me--text {
+    color: #FEFEFE;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5em;
+    margin-left: 3%;
+    margin-right: 3%;
+    line-height: 2em;
+    width: 70%;
+}
+
+.underline-highlight {
+    text-decoration: underline;
+    text-decoration-color: #FEFEFE;
+    text-decoration-thickness: 3px;
+    transition: all 0.2s;
+}
+
+.underline-highlight:hover {
+    background-color: white;
+    color: black;
+}
+
+.underline-highlight[title]:hover {
+    background-color: white;
+}
+
+.projects--title {
+    color: #FEFEFE;
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5em;
+    margin-left: 3%;
+    margin-right: 3%;
+    line-height: 2em;
+    width: 70%;
+    text-decoration: underline;
+}
+
+.project-one {
+    color: #FEFEFE;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3em;
+    margin-left: 3%;
+    margin-right: 3%;
+    line-height: 2em;
+    width: 70%;
+}
+
+.project-one--button {
+    color: #FEFEFE;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3em;
+    background-color: black;
+    width: 150px;
+    margin-left: 3%;
+    height: 60px;
+    border-radius: 30px;
+    position: relative;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.project-one--button::after {
+    content: "";
+    position: absolute;
+    width: 102%;
+    height: 107%;
+    border-radius: 30px;
+    background-image: linear-gradient(110deg, rgb(3, 198, 198), rgb(180, 0, 180));
+    z-index: -1;
+}
+
+.project-one--button:hover {
+    z-index: 0;
+    box-shadow: 40px 0 200px magenta, -40px 0 200px cyan;
+    cursor: pointer;
+}
+
+.project-one--button__link {
+    text-decoration: none;
+    color: white;
+}
+
+.project-one--button__link:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.circle-one {
+    width: 0.1px;
+    height: 0.1px;
+    border-radius: 50%;
+    position: absolute; /* Allows precise positioning */
+    background-color: magenta;
+    box-shadow: 0px 0px 200px 50px magenta;
+}
+
+.circle-two {
+    width: 0.1px;
+    height: 0.1px;
+    border-radius: 50%;
+    position: absolute; /* Allows precise positioning */
+    background-color: cyan;
+    box-shadow: 0px 0px 200px 50px cyan;
+}
+
+/* Example Circle Positions */
+.circle-one {
+    width: 0.1px;
+    height: 0.1px;
+    border-radius: 50%;
+    position: absolute; /* Allows precise positioning */
+    background-color: cyan;
+    box-shadow: 0px 0px 200px 50px cyan;
+    top: 10%; /* Adjust the top position */
+    left: 20%; /* Adjust the left position */
+    z-index: -10;
+    animation: move-one 60s infinite;
+}
+
+.circle-two {
+    width: 0.1px;
+    height: 0.1px;
+    border-radius: 50%;
+    position: absolute; /* Allows precise positioning */
+    background-color: magenta;
+    box-shadow: 0px 0px 300px 50px magenta;
+    top: 10%; /* Adjust the top position */
+    left: 90%; /* Adjust the left position */
+    z-index: -0;
+    animation: move-two 40s infinite;
+}
+
+.circle-three {
+    width: 0.1px;
+    height: 0.1px;
+    border-radius: 50%;
+    position: absolute; /* Allows precise positioning */
+    background-color: cyan;
+    box-shadow: 0px 0px 200px 50px cyan;
+    top: 10%; /* Adjust the top position */
+    left: 90%; /* Adjust the left position */
+    z-index: -0;
+    animation: move-three 90s infinite linear;
+}
+
+.circle-four {
+    width: 0.1px;
+    height: 0.1px;
+    border-radius: 50%;
+    position: absolute; /* Allows precise positioning */
+    background-color: magenta;
+    box-shadow: 0px 0px 200px 50px magenta;
+    top: 36%; /* Adjust the top position */
+    left: 20%; /* Adjust the left position */
+    z-index: -0;
+    animation: move-four 120s infinite linear;
+}
+
+.circle-five {
+    width: 0.1px;
+    height: 0.1px;
+    border-radius: 50%;
+    position: absolute; /* Allows precise positioning */
+    background-color: cyan;
+    box-shadow: 0px 0px 400px 70px cyan;
+    top: 60%; /* Adjust the top position */
+    left: 40%; /* Adjust the left position */
+    z-index: -0;
+    animation: move-five 50s infinite linear;
+}
+
+@keyframes move-one {
+    from {
+        top: 10%;
+        left: 20%;
+    }
+    to {
+        transform: translate(300px, 300px); /* Translate X and Y */
+        box-shadow: 0px 0px 0px 0px cyan;
+    }
+}
+
+@keyframes move-two {
+    from {
+        top: 90%;
+        left: 90%;
+    }
+    to {
+        transform: translate(-400px, 400px); /* Translate X and Y */
+        box-shadow: 0px 0px 0px 0px magenta;
+    }
+}
+
+@keyframes move-three {
+    from {
+        top: 10%;
+        left: 90%;
+    }
+    to {
+        transform: translate(-400px, 200px); /* Translate X and Y */
+        box-shadow: 0px 0px 0px 0px cyan;
+    }
+}
+
+@keyframes move-four {
+    from {
+        top: 30%;
+        left: 47%;
+    }
+    to {
+        transform: translate(100px, 200px); /* Translate X and Y */
+        box-shadow: 0px 0px 0px 0px magenta;
+    }
+}
+
+@keyframes move-five {
+    from {
+        top: 60%;
+        left: 40%;
+    }
+    to {
+        transform: translate(-100px, -200px); /* Translate X and Y */
+        box-shadow: 0px 0px 0px 0px cyan;
+    }
+}
