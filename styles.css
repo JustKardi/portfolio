@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    overflow: hidden; /* Prevent scrollbars from appearing */
+    overflow-x: hidden;
 }
 
 /* Change the highlight color of the entire page */
@@ -135,6 +135,121 @@ body {
 .project-one--button__link:visited {
     text-decoration: none;
     color: white;
+}
+
+.github-link {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    position: relative;
+    left: 90%;
+    top: -300px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: all 0.5s;
+}
+
+.github-link:after {
+    content: "";
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    border-radius: 50%;
+    background-image: linear-gradient(110deg, cyan, magenta);
+    z-index: -1;
+}
+
+.github-link:hover {
+    cursor: pointer;
+    z-index: 0;
+    box-shadow: 50px 0px 200px magenta, -50px 0px 200px cyan;
+}
+
+.github-link__link {
+    color: white;
+}
+
+.github-link__link:visited {
+    color: white;
+}
+
+.courses--title {
+    color: #FEFEFE;
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5em;
+    margin-left: 3%;
+    margin-right: 3%;
+    line-height: 2em;
+    width: 70%;
+    width: 40%;
+}
+
+.courses--title__span {
+    text-decoration: underline;
+    color: cyan;
+    transition: all 0.2s;
+}
+
+.courses--title__span:hover {
+    color: cyan;
+    box-shadow: 0px 0px 200px 10px cyan;
+    background-color: #001e1e;
+}
+
+.courses--title__span-two {
+    text-decoration: underline;
+    color: magenta;
+    transition: all 0.2s;
+}
+
+.courses--title__span-two:hover {
+    color: magenta;
+    box-shadow: 0px 0px 200px 10px magenta;
+    background-color: #190019;
+}
+
+.courses-text {
+    color: #FEFEFE;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5em;
+    margin-left: 3%;
+    margin-right: 3%;
+    line-height: 2em;
+    width: 70%;
+    width: 40%;
+}
+
+.courses-text__span {
+    text-decoration: underline;
+    color: cyan;
+    transition: all 0.2s;
+}
+
+.courses-text__span:hover {
+    box-shadow: 0px 0px 200px 10px cyan;
+    background-color: #001e1e;
+}
+
+.courses-list {
+    color: #FEFEFE;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+    margin-left: 3%;
+    margin-right: 3%;
+    line-height: 2em;
+    width: 70%;
+    width: 40%;
+}
+
+.courses-list__span--one {
+    text-decoration: underline;
+    color: cyan;
 }
 
 .circle-one {
@@ -274,4 +389,19 @@ body {
         transform: translate(-100px, -200px); /* Translate X and Y */
         box-shadow: 0px 0px 0px 0px cyan;
     }
+}
+
+::-webkit-scrollbar {
+    width: 11px; /* Adjust the width for a thin scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #2f2f2f; /* Dark grey background */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff; /* White scrollbar */
+    border-radius: 10px; /* Rounded corners for the scrollbar */
+    border: 2px solid #2f2f2f; /* Dark grey border to match the track */
 }
