@@ -243,13 +243,34 @@ body {
     margin-left: 3%;
     margin-right: 3%;
     line-height: 2em;
-    width: 70%;
-    width: 40%;
+    width: 20%;
+    background-color: black;
+    border-radius: 10px;
+    position: relative;/* Ensures content is above the ::after */
+    padding: 25px; /* Adds some padding so the border doesn't overlap content */
+    box-sizing: border-box; /* Ensures padding is included in the element's width and height */
+}
+
+.courses-list::after {
+    content: "";
+    position: absolute;
+    top: -5px; /* Adjust to control border thickness */
+    left: -5px; /* Adjust to control border thickness */
+    right: -5px; /* Adjust to control border thickness */
+    bottom: -5px; /* Adjust to control border thickness */
+    border-radius: 15px; /* Match the border-radius plus the border thickness */
+    background-image: linear-gradient(110deg, cyan, magenta);
+    z-index: -1; /* Places the ::after pseudo-element behind the content */
 }
 
 .courses-list__span--one {
     text-decoration: underline;
     color: cyan;
+}
+
+.courses-list__span--two {
+    text-decoration: underline;
+    color: magenta;
 }
 
 .circle-one {
